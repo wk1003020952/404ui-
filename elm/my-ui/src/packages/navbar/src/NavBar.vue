@@ -10,13 +10,14 @@
 
 <script>
     export default {
+        props:["title"],
         name: "NavBar"
     }
 </script>
 
 <style lang="stylus">
   .header
-    background-color #02a774
+    background-color #f7f9fB
     position fixed
     z-index 100
     left 0
