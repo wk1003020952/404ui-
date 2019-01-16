@@ -42,7 +42,6 @@
   }
   div.go_T
     position fixed
-    po
     bottom 1rem
     right .12rem
     z-index 10
