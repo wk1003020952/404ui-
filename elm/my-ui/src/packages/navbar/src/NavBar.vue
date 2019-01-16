@@ -1,11 +1,11 @@
 <template>
-  <header class="header">
-    <slot name="left"></slot>
-    <span class="header_title">
-      <span class="header_title_text ellipsis">{{title}}</span>
-    </span>
-    <slot name="right"></slot>
-  </header>
+  <div>
+    <div class="header_bar">
+      <slot name="left" class="iconfont"></slot>
+      <span class="tit">{{title}}</span>
+      <slot name="right" class="increat"></slot>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,43 +16,28 @@
 </script>
 
 <style lang="stylus">
-  .header
-    background-color #f7f9fB
-    position fixed
-    z-index 100
-    left 0
-    top 0
-    width 100%
-    height 45px
-    .header_search
-      position absolute
-      left 15px
-      top 50%
-      transform translateY(-50%)
-      width 10%
-      height 50%
-      .icon-sousuo
-        font-size 25px
-        color #fff
-    .header_title
-      position absolute
-      top 50%
-      left 50%
-      transform translate(-50%, -50%)
-      width 50%
-      color #fff
-      text-align center
-      .header_title_text
-        font-size 20px
-        color #fff
-        display block
-    .header_login
-      font-size 14px
-      color #fff
-      position absolute
-      right 15px
-      top 50%
-      transform translateY(-50%)
-      .header_login_text
-        color #fff
+  .header_bar
+    background-color #ccc
+    height:.44rem
+    line-height: .44rem
+    position: relative
+    overflow: hidden
+    &>.iconfont
+      position: absolute
+      left:0
+      font-size:20px
+      z-index:10
+    &>.tit
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      text-align: center
+      font-size:18px
+    &>.increat
+      right 0
+      position: absolute
+      z-index:10
+
 </style>

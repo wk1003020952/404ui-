@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
-    <div class="go_T">
-      <solt name="goTop" v-if="go" @click="gotop"></solt>
+    <div class="go_T" v-if="go" @click="gotop">
+      <slot name="go_T"></slot>
     </div>
   </transition>
 </template>
@@ -45,8 +45,8 @@
     bottom 1rem
     right .12rem
     z-index 10
-    width .3rem
-    height .3rem
+    width .55rem
+    height .55rem
     cursor pointer
 
 </style>
