@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*=========================reset================*/
+body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,figure,figcaption{ padding:0; margin:0}
+ul,ol{ list-style:none;}
+input{ outline:none;}
+img{ display:block; border:0;}
+body{  color:#333; font-family:"微软雅黑"}
+@media screen and (max-width:374px){
+    body{ font-size:12px; }
+}
+@media screen and (min-width:375px) and (max-width:413px){
+    body{ font-size:16px; }
+}
+@media screen and (min-width:414px){
+    body{ font-size:18px; }
+}
+
+a{ text-decoration:none; color:#666;}
+header,footer,nav,main,section,article,aside,figure,figcaption{ display:block;}
+html,body{ height:100%;}
+*{ box-sizing:border-box}
+
+html{ font-size:26.67vw;}
+
