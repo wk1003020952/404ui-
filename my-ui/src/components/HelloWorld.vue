@@ -1,24 +1,40 @@
 <template>
   <div class="hello">
-    <button @click="bm1">22222</button>
-    <four-tabs></four-tabs>
-    <four-input-box label="哈哈" inputValue="111" inputType="text"></four-input-box>
+    <Addresslist></Addresslist>
   </div>
 </template>
 
 <script>
-  import {MessageBox} from '../../404ui/packages/message-box'
 export default {
   name: 'HelloWorld',
-  methods: {
-    showLi(index){
-      console.log(index)
-    },
-    bm1(){
-      MessageBox.confirm(111);
+  data(){
+    return {
+      formData:[
+        {label:'姓名',placeholderTxt: '收货人姓名',inputValue: '里斯'},
+        {label:'电话',placeholderTxt: '收货人手机号',inputValue: '13544463324'},
+        {label:'地区',placeholderTxt: '选择省市区',inputValue: '陕西省西安市高新区'},
+        {label:'详细地址',placeholderTxt: '街道门牌、楼层房间号等信息',inputValue: '绿港22号楼3101'},
+        {label:'邮政编码',placeholderTxt: '邮政编码',inputValue: '009900'},
+      ]
     }
   },
-}
+  methods: {
+    onSave(a) {
+      console.log(a)
+    },
+    onDel(a) {
+      console.log(a)
+    },
+    /**
+     * a  是数组，一个是checked状态，一个是form表单数据
+     * @param a
+     */
+    onSwitch(a) {
+      console.log(a[0] + '-----------')
+      console.log(a[1][0].label + '-----------')
+    }
+  }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

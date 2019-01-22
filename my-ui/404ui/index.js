@@ -9,6 +9,9 @@ import echartsbar from './packages/echartsbar/index'
 import search from './packages/search/index'
 import tabs from './packages/tabs/index'
 import inputBox from './packages/inputBox/index'
+import switchs from './packages/switch/index'
+import addresslist from './packages/addresslist/index'
+import AddressEdit from './packages/AddressEdit/index'
 
 
 const FourUI={}
@@ -24,5 +27,8 @@ FourUI.install=function (Vue,opts) {
   Vue.component(search.name, search);
   Vue.component(tabs.name, tabs);
   Vue.component(inputBox.name, inputBox);
+  Vue.component(switchs.name, switchs);
+  Vue.component(AddressEdit.name, AddressEdit);
+  Vue.component(addresslist.name, addresslist);
 }
 export default FourUI;
