@@ -1,6 +1,7 @@
 <template>
   <transition name="fade">
     <div class="go_T" v-if="go" @click="gotop">
+      <div v-if="txt">{{txt}}</div>
       <slot name="go_T"></slot>
     </div>
   </transition>
@@ -8,6 +9,7 @@
 
 <script>
     export default {
+        props:["scrolT","txt"],
         name: "FourGoTop",
       data(){
         return{
@@ -20,7 +22,7 @@
       methods:{
         handle(){
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-          if (scrollTop>800){
+          if (scrollTop>this.scrolT||700){
             this.go=true
           }else {
             this.go=false
@@ -44,10 +46,10 @@
   div.go_T
     position fixed
     bottom 50px
-    right .12rem
+    right 12px
     z-index 10
-    width .55rem
-    height .55rem
+    width 55px
+    height 55px
     cursor pointer
 
 </style>

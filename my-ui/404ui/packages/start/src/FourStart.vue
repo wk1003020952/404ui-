@@ -1,5 +1,5 @@
 <template>
-  <div class="star" :class="'star-'+size">
+  <div class="star" :class="'star-'+size||24">
     <span class="star-item" v-for="(sc, index) in starClasses" :class="sc" :key="index"></span>
   </div>
 </template>

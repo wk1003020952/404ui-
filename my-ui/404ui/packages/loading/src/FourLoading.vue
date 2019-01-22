@@ -23,7 +23,6 @@
     left 50px
     top 30px
   }
-
   .line-spin-fade-loader > div:nth-child(1) {
     top: 20px;
     left: 0;

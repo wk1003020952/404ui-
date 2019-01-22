@@ -30,22 +30,21 @@
 
 <style scoped lang="stylus">
   div.cons
-    height 2rem
-    padding 0 .1rem
+    height 200px
     display: flex
     flex-wrap wrap
     justify-content space-between
     text-align center
     a
       width 18%
-      padding .05rem .03rem
-      margin-top .1rem
+      padding 5px 3px
+      margin-top 1px
       display flex
       align-items center
       flex-direction column
       img
-        width .45rem
+        width 45px
         display inline-block
       span
-        font-size .14rem
+        font-size 14px
 </style>

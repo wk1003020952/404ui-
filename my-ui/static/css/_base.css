@@ -1,0 +1,135 @@
+﻿@charset "utf-8";
+/*--------------- 代码块 *border-box-----------------*/
+*,*::before,*::after
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*----------- 新语义标签块级化，并清内外间距*/
+header,footer,main,nav,aside,section,figure,figcaption{
+  display:block;
+  margin: 0;
+  padding:0;
+}
+
+/**-===================清除内外边距 和边框====================**/
+body,div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+span,a,img,em,b,i,/*行内元素*/
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */
+{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/** --------------------设置默认字体----------------- **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 14px Arial,Helvetica,sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%;
+  line-height: 1.1;
+  font-weight:100;}
+address, cite, dfn, em, var,i { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/**-------------------- 重置列表元素--------------------------- **/
+ul, ol{ list-style: none; }
+
+/** ------------------重置文本格式元素 **/
+a {
+  text-decoration: none;
+  color: #333;
+  outline: none;
+}
+a:hover{
+  text-decoration: none;
+  color: #333;
+  background:none;
+}
+/* -------------------重置表单 样式----------------*/
+input,textarea,img,button{
+  outline:none;
+  border:none;
+}
+/**-------------- 重置表单元素------------------------ **/
+legend { color: #000; } /* for ie6 */
+fieldset,img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/******************** 注：optgroup 无法扶正 */
+
+/**--------------- 重置表格元素 -------------------**/
+table { border-collapse: collapse; border-spacing: 0; }
+/**----------------- ------iconfont字体的设置 、、、可删除---------------------- **/
+.iconfont::before{
+  display: inline-block;
+  height: auto;
+  line-height: 1px;
+}
+.iconfont{
+  display:inline-block;
+  height: auto;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**===============================公共样式=================================**/
+/* ---------------------------清除浮动 */
+.clearfix:before,.clearfix:after{
+  display: block;
+  content: "";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+/*------------------------设置左右浮动的class名*/
+.l{
+  float: left;
+}
+.r{
+  float: right;
+}
+/*-----------------------设置默认样式*/
+.throughLine{
+  text-decoration: line-through;
+}
+img{
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+p{
+  font-size: 14px;
+  //line-height: 24px;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  background-color: transparent;
+}
+/*-----------------弹性盒*/
+.fr{width:100%;display: flex;}
+.fr .fr-l{flex:1}
+.fr .int1{width: 93%;height:30px;border-radius: 2px;border:1px solid #ccc;}
+.fr .fr-r{flex:1}
+/*---------------------弹性布局*/
+html,body{
+height: 100%;
+}
+body{
+  position: relative;
+}

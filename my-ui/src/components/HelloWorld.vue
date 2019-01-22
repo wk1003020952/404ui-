@@ -1,22 +1,23 @@
 <template>
   <div class="hello">
-    <four-start :score="4.5" :size="24"></four-start>
-    <four-go-top>
-      <span slot="go_T">返回顶部</span>
-    </four-go-top>
-    <four-loading :color="color"></four-loading>
-
+    <button @click="bm1">22222</button>
+    <four-tabs></four-tabs>
+    <four-input-box label="哈哈" inputValue="111" inputType="text"></four-input-box>
   </div>
 </template>
 
 <script>
+  import {MessageBox} from '../../404ui/packages/message-box'
 export default {
   name: 'HelloWorld',
-  data(){
-    return{
-      color:"#ccc"
+  methods: {
+    showLi(index){
+      console.log(index)
+    },
+    bm1(){
+      MessageBox.confirm(111);
     }
-  }
+  },
 }
 </script>
 
@@ -25,7 +26,10 @@ export default {
   div.hello
     height 1800px
 </style>
-<style>
+<style lang="stylus">
+  .hello
+    width: 100%
+    height: 100%
   .swiper-pagination-bullet-active{
     opacity: 1 !important;
     background: #007aff !important;

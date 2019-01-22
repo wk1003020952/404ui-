@@ -1,28 +1,38 @@
 <template>
   <div>
     <div class="header_bar">
-      <slot name="left" class="iconfont"></slot>
+      <span v-if="lefts"  class="lefts" @click="click_left">{{lefts}}</span>
+      <slot name="left" class="lefts"></slot>
       <span class="tit">{{title}}</span>
       <slot name="right" class="increat"></slot>
+      <span v-if="increat" class="increat" @click="click_right">{{increat}}</span>
     </div>
   </div>
 </template>
 
 <script>
     export default {
-        props:["title"],
-        name: "FourNavBar"
+        props:["title","lefts","increat"],
+        name: "FourNavBar",
+        methods:{
+          click_left(){
+            this.$emit("left_click")
+          },
+          click_right(){
+            this.$emit("right_click")
+          },
+        }
     }
 </script>
 
 <style lang="stylus">
   .header_bar
     background-color #ccc
-    height:.44rem
-    line-height: .44rem
+    height:44px
+    line-height: 44px
     position: relative
     overflow: hidden
-    &>.iconfont
+    &>.lefts
       position: absolute
       left:0
       font-size:20px
